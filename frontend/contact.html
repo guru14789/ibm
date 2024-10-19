@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: black;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 28px;
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bfff;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 50px;
+            max-width: 75%;
+            margin: 0 ;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-section, .right-section {
+            flex-direction: column;
+            
+        
+        }
+
+        .left-section {
+            max-width: 50%;
+        }
+
+        .left-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .left-section p {
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            margin-top: 24.222%;
+        }
+
+        .contact-info div {
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        .right-section {
+            max-width: 100%;
+            margin-left: 2em;
+        }
+
+        .right-section label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            width: 120%;
+        }
+
+        .right-section input, .right-section textarea {
+            width: 100%;
+            padding: 10px 50px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: black;
+            color: #ffffff;
+            font-size: 16px;
+            outline: none;
+            border: none;
+            width: 100%;
+            align-items: center;
+        }
+
+        .right-section input::placeholder,
+        .right-section textarea::placeholder {
+            color: #888;
+            width: 100%;
+        }
+
+        .send-button {
+            display: block;
+            width: 100px;
+            height: 60px;
+            background-color: #00bfff;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+
+        .send-button:hover {
+            background-color: #009ec3;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SYRUS CHATBOT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-section">
+                <h1>We’d love to hear your thoughts</h1>
+                <p>Tell us about your vision: which challenges are you facing? We’d love to stay in touch with you, so we are always ready to answer any question that interests you.</p>
+                <div class="contact-info">
+                    <div>PHONE</div>
+                    <div>1 (888) 818-6477</div>
+                    <div>EMAIL</div>
+                    <div>contact@vochi.com</div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="right-section">
+                <form action="https://formsubmit.co/sreekumar.career@gmail.com" method="POST">
+                    <label for="name">What’s your name?</label>
+                    <input type="text" id="name" name="name" value="Marvin McKinney">
+                    <label for="email">What’s your email?</label>
+                    <input type="email" id="email" name="email" value="marvin_mckinney@gmail.com">
+                    <label for="thoughts">Share your thoughts</label>
+                    <textarea id="thoughts" name="thoughts" rows="4">Hi, I’d love to ask you...</textarea>
+                    <input type="submit" class="send-button" value="SEND">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

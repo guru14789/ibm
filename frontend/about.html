@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SYRUS CHATBOT</title>
+    <link rel="stylesheet" href="styles\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #121212;
+    
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    position: relative; /* Required for pseudo-element positioning */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bfff; /* Change text color to blue on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Underline expands to full width on hover */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00bfff; /* Blue color for underline */
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+}
+
+.login-link {
+    color: white; /* Gold color for the Login link */
+}
+
+.login-link::after {
+    background-color: gold; /* Gold underline for the Login link */
+}
+
+.login-link:hover {
+    color: gold; /* Keep it gold even on hover */
+}
+
+.about,.future-goals {
+    padding: 40px 50px;
+    background-color: #1d1d1d;
+}
+.team,.testnominals{
+    padding: 40px 50px;
+    background-color: #0000;
+}
+
+.about h2,.team p,.future-goals h2,.testnominals h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out forwards;
+}
+
+.about p,.team p,.future-goals p,.testnominals p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.slide-up {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .about h2,.team h2,.future-goals h2,.testnominals h2 {
+        font-size: 24px;
+    }
+
+    .about p,.team p,.future-goals p,.testnominals p {
+        font-size: 16px;
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SYRUS CHATBOT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="base.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html" class="login-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2 class="fade-in">About Our Project</h2>
+            <p class="fade-in">
+                SYRUS CHATBOT represents a cutting-edge solution that integrates natural language processing (NLP) and computer vision to create an advanced image recognition chatbot. Our goal is to provide users with a chatbot that can analyze and interpret images, generating accurate and contextually relevant responses to user queries about the image.
+            </p>
+            <p class="fade-in">
+                <strong>Introduction</strong><br>
+                With the rise of artificial intelligence (AI) and computer vision, creating conversational models that combine both NLP and image recognition remains a challenge. SYRUS CHATBOT aims to bridge this gap by offering a chatbot that not only processes natural language but also understands and analyzes images. By leveraging technologies like YOLOv3 for object detection and Mask R-CNN for instance segmentation, our chatbot can accurately recognize objects within images and generate responses based on the detected objects.
+            </p>
+            <p class="fade-in">
+                <strong>Related Work</strong><br>
+                Traditional chatbots often rely on hard-coded templates or deep learning models to generate responses. While deep learning models can generate grammatically correct responses, they often lack memory of previous interactions. SYRUS CHATBOT utilizes a Late Fusion Encoder model, combining image features with historical dialog data to provide more accurate and contextually relevant responses. We also incorporate state-of-the-art object detection methods, such as YOLO and Mask R-CNN, to enhance our chatbot's ability to interpret and respond to visual data.
+            </p>
+            <p class="fade-in">
+                <strong>Approach</strong><br>
+                The SYRUS CHATBOT employs an encoder-decoder framework. The encoder processes both image and text inputs, while the decoder generates responses based on the encoded information. The Late Fusion Encoder combines features from the image and text inputs into a joint representation. Our approach also includes a Self-Attention module to ensure that the chatbot effectively utilizes all available information for generating responses.
+            </p>
+            <p class="fade-in">
+                <strong>Experiments</strong><br>
+                Our experimental setup involves training the chatbot using the COCO dataset, which provides annotated images for object detection and segmentation. The training process includes data preprocessing, hyperparameter tuning, and evaluation using metrics such as Mean Reciprocal Rank (MRR) and Recall@k. Our results demonstrate the effectiveness of combining image and text features for improved chatbot performance.
+            </p>
+            <p class="fade-in">
+                <strong>Conclusion</strong><br>
+                SYRUS CHATBOT showcases the potential of integrating NLP and computer vision technologies to create a powerful image recognition chatbot. By leveraging advanced models and datasets, we aim to provide users with a tool that can effectively interpret and respond to queries about images, making it a valuable asset in various domains such as organizations, educational institutions, and more.
+            </p>
+        </section>
+
+        <section class="team">
+            <h2 class="fade-in">Meet the Team</h2>
+            <div class="team-member fade-in">
+                <img src="images/member1.jpg" alt="Team Member 1">
+                <div class="member-info">
+                    <h3>RENU</h3>
+                    <p class="fade-in">Lead Developer - RENU oversees the development of the chatbot's core features, ensuring seamless integration between NLP and computer vision technologies.</p>
+                </div>
+            </div>
+            <div class="team-member fade-in">
+                <img src="images/member2.jpg" alt="Team Member 2">
+                <div class="member-info">
+                    <h3>YASH</h3>
+                    <p class="fade-in">Data Scientist - YASH is responsible for designing and optimizing the algorithms used for image recognition and natural language processing.</p>
+                </div>
+            </div>
+            <div class="team-member fade-in">
+                <img src="images/member3.jpg" alt="Team Member 3">
+                <div class="member-info">
+                    <h3>SREEKUMAR S</h3>
+                    <p class="fade-in">UI/UX Designer - SREEKUMAR S designs the user interface and ensures a smooth user experience by creating an intuitive and visually appealing design.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-goals">
+            <h2 class="fade-in">Future Goals</h2>
+            <p class="fade-in">
+                Our vision for the future involves expanding SYRUS CHATBOT's capabilities to include multilingual support and enhanced image recognition features. We aim to integrate more advanced deep learning techniques and continuously improve the chatbot's performance based on user feedback and evolving technologies.
+            </p>
+        </section>
+
+        <section class="testnominals">
+            <h2 class="fade-in">What Our Users Say</h2>
+            <div class="testimonial fade-in">
+                <p class="fade-in">"SYRUS CHATBOT has transformed the way we interact with image data. Its accuracy and relevance are unmatched!"</p>
+                <footer>- SREEKUMAR S, Tech Enthusiast</footer>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p class="fade-in"><center>&copy; 2024 SYRUS CHATBOT. All rights reserved.</center></p>
+    </footer>
+</body>
+</html>
+
+
+
